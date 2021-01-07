@@ -17,7 +17,6 @@ function añadirDatos(){
      * pueden seleccionar elementos del body directamente porque estan
      * en otra caja
     */
-    var e = 0;
     for(let i = 0; i < array_datos.length; i++){
         
         
@@ -34,6 +33,9 @@ function añadirDatos(){
 }
 
 function tomarDatos(){
-    var dato = document.getElementsByClassName('datos');
-    console.log(dato);
+    var datos = [];
+    var datos = document.getElementsByClassName('datos');
+    var choiceIndex = Math.floor(Math.random() * datos.length);
+    console.log(`Congratulations! The winner is: ${datos[choiceIndex].innerHTML}`);
+        
 }
