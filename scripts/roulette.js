@@ -1,6 +1,6 @@
 'use strict'
 
-//Mouse events
+//Mouse and keyspress events 
 var btnAdd = document.querySelector('#addElement');
 btnAdd.addEventListener('click', ()=>{
     añadirDatos();
@@ -10,6 +10,8 @@ var btnSpin = document.querySelector('#spinBtn');
 btnSpin.addEventListener('click', ()=>{
     spinRoulette();
 });
+
+
 
 //Main functions
 function añadirDatos(){
@@ -50,5 +52,13 @@ function spinRoulette(){
     var datos = document.getElementsByClassName('datos');
     var choiceIndex = Math.floor(Math.random() * datos.length);
     console.log(`Congratulations! The winner is: ${datos[choiceIndex].innerHTML}`);
+
+    var winnerTag = document.createElement('h1');
+    winnerTag.id = 'winnerPanel';
+    var winner = document.createTextNode(`Congratulations! The winner is: ${datos[choiceIndex].innerHTML}`);
+    winnerTag.appendChild(winner);
+
+    var body = document.querySelector('#bodyApp');;
+    body.appendChild(winnerTag);
         
 }

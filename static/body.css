@@ -1,3 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     --blue-1: rgb(50, 50, 75);
+    background: var(--blue-1);
+}
+
+button{
+    width: 70px;
+    height: 70px;
+    margin-left: 5px;
+    display: inline-block;
 }
