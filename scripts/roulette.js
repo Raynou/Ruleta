@@ -1,12 +1,12 @@
 'use strict'
 
 //Mouse and keyspress events 
-var btnAdd = document.querySelector('#addElement');
+let btnAdd = document.querySelector('#addElement');
 btnAdd.addEventListener('click', ()=>{
     añadirDatos();
 });
 
-var btnSpin = document.querySelector('#spinBtn');
+let btnSpin = document.querySelector('#spinBtn');
 btnSpin.addEventListener('click', ()=>{
     spinRoulette();
 });
@@ -35,11 +35,11 @@ function añadirDatos(){
     for(let i = 0; i < array_datos.length; i++){
         
         
-        var nuevoElemento = document.createElement(`li`);
+        let nuevoElemento = document.createElement(`li`);
         nuevoElemento.className = 'datos';
-        var nuevoTexto = document.createTextNode(array_datos[i]);
+        let nuevoTexto = document.createTextNode(array_datos[i]);
         nuevoElemento.appendChild(nuevoTexto);
-        var selectorUL = document.getElementById('listOfThings');
+        let selectorUL = document.getElementById('listOfThings');
         selectorUL.appendChild(nuevoElemento);    
             
         
@@ -48,17 +48,17 @@ function añadirDatos(){
 }
 
 function spinRoulette(){
-    var datos = [];
-    var datos = document.getElementsByClassName('datos');
-    var choiceIndex = Math.floor(Math.random() * datos.length);
+    let datos = [];
+    let datos = document.getElementsByClassName('datos');
+    let choiceIndex = Math.floor(Math.random() * datos.length);
     console.log(`Congratulations! The winner is: ${datos[choiceIndex].innerHTML}`);
 
-    var winnerTag = document.createElement('h1');
+    let winnerTag = document.createElement('h1');
     winnerTag.id = 'winnerPanel';
-    var winner = document.createTextNode(`Congratulations! The winner is: ${datos[choiceIndex].innerHTML}`);
+    let winner = document.createTextNode(`Congratulations! The winner is: ${datos[choiceIndex].innerHTML}`);
     winnerTag.appendChild(winner);
 
-    var body = document.querySelector('#bodyApp');;
+    let body = document.querySelector('body');;
     body.appendChild(winnerTag);
         
 }
