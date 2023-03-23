@@ -31,12 +31,12 @@ function addData(){
 function spinRoulette(){
     let data = [];
     data = document.getElementsByClassName('datos');
-    let choiceIndex = Math.floor(Math.random() * datos.length);
-    console.log(`Congratulations! The winner is: ${datos[choiceIndex].innerHTML}`);
+    let choiceIndex = Math.floor(Math.random() * data.length);
+    console.log(`Congratulations! The winner is: ${data[choiceIndex].innerHTML}`);
 
     let winnerTag = document.createElement('h1');
     winnerTag.id = 'winnerPanel';
-    let winner = document.createTextNode(`Congratulations! The winner is: ${datos[choiceIndex].innerHTML}`);
+    let winner = document.createTextNode(`Congratulations! The winner is: ${data[choiceIndex].innerHTML}`);
     winnerTag.appendChild(winner);
 
     let body = document.querySelector('body');
