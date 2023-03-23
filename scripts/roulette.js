@@ -49,7 +49,7 @@ function añadirDatos(){
 
 function spinRoulette(){
     let datos = [];
-    let datos = document.getElementsByClassName('datos');
+    datos = document.getElementsByClassName('datos');
     let choiceIndex = Math.floor(Math.random() * datos.length);
     console.log(`Congratulations! The winner is: ${datos[choiceIndex].innerHTML}`);
 
